@@ -1,0 +1,55 @@
+{
+  "name": "getweather",
+  "version": "1.0.0",
+  "description": "weather forecast",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "lint": "prettier --check ./src && eslint ./src",
+    "lint:staged": "prettier --check ./src && eslint ./src && jest --coverage",
+    "lint:fix": "prettier --write ./src && eslint ./src --fix",
+    "prepare": "husky install",
+    "build": "webpack --node-env production",
+    "dev": "webpack serve --node-env development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kazakovaolga/weatherForecast.git"
+  },
+  "author": "olga.kazakova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kazakovaolga/weatherForecast/issues"
+  },
+  "homepage": "https://github.com/kazakovaolga/weatherForecast#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "babel-jest": "^28.1.1",
+    "babel-loader": "^8.2.5",
+    "core-js": "^3.22.8",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.5.3",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.1",
+    "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.1",
+    "lint-staged": "^13.0.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "node-fetch": "^3.2.5",
+    "prettier": "2.6.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.2"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  }
+}
