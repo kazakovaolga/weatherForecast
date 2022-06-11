@@ -4,7 +4,6 @@ const key = "citiesNames";
 export function getMap(el, lat, lon) {
   let mapImg;
   if (lat === "notFound" || lon === "notFound") {
-    //mapImg = 'https://picsum.photos/picsum/500/300';
     mapImg = "https://picsum.photos/id/1025/500/300";
   } else {
     mapImg = `https://static-maps.yandex.ru/1.x/?ll=${lon},${lat}&z=10&l=map`;
@@ -73,7 +72,7 @@ async function showWeather(el, weatherInfo) {
 
   let row_data_3 = document.createElement("td");
   row_data_3.className = "icon";
-  row_data_3.innerHTML = `<img src="http://openweathermap.org/img/wn/${j.weather[0].icon}@2x.png">`;
+  row_data_3.innerHTML = `<img src="https://openweathermap.org/img/wn/${j.weather[0].icon}@2x.png">`;
 
   let row_data_4 = document.createElement("td");
   row_data_4.innerHTML = `${j.coord.lat}`;
@@ -96,7 +95,7 @@ async function showWeather(el, weatherInfo) {
 //Function for getting weather data by city name
 async function getWeather(cityName) {
   const appId = "2597ebe4fdf3e724b73c766fb984c2fb";
-  const url = `http://api.openweathermap.org/data/2.5/weather?units=metric&q=
+  const url = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=
   ${cityName}&appid=${appId}`;
   let response = await fetch(url);
   let status = response.status;
@@ -112,7 +111,7 @@ async function getWeather(cityName) {
         lon: "notFound",
       },
     };
-  let json = await response.json();
+  let json = await response.json(); 
   return json;
 }
 
