@@ -117,7 +117,7 @@ async function getWeather(cityName) {
 
 //The function of obtaining the coordinates of the location by the user's IP address
 async function getIP() {
-  const url = "http://ipwho.is/";
+  const url = "https://ipwho.is/";
   let response = await fetch(url);
   let json = await response.json();
   return {
