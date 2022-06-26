@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "lint": "prettier --check ./src && eslint ./src",
+    "lint": "prettier --write ./src && eslint ./src",
     "lint:staged": "prettier --check ./src && eslint ./src && jest --coverage",
     "lint:fix": "prettier --write ./src && eslint ./src --fix",
     "prepare": "husky install",
